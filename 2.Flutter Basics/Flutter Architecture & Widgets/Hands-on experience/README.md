@@ -99,6 +99,6 @@ This is a simple Flutter counter app that demonstrates the Flutter architecture 
 
 ## App Preview
 
-![Alt Text](/Flutter-Projects/2.Flutter%20Basics/Flutter%20Architecture%20%26%20Widgets/Images/counter-app.png)
+![App Preview](https://github.com/bhargavdharan/Flutter-Projects/blob/main/2.Flutter%20Basics/Flutter%20Architecture%20&%20Widgets/Images/counter-app.png?raw=true)
 
 

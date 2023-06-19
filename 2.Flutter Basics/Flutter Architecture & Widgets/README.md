@@ -33,23 +33,23 @@ They are created using the `class` keyword and override the `build()` method to 
 
 Example: `Text`, `Icon`, `Container`.
 
-    ```dart
-        class MyApp extends StatelessWidget {
-        @override
-        Widget build(BuildContext context) {
-            return MaterialApp(
-            home: Scaffold(
-                appBar: AppBar(
-                title: Text('My App'),
-                ),
-                body: Center(
-                child: Text('Hello, Flutter!'),
-                ),
+```dart
+    class MyApp extends StatelessWidget {
+    @override
+    Widget build(BuildContext context) {
+        return MaterialApp(
+        home: Scaffold(
+            appBar: AppBar(
+            title: Text('My App'),
             ),
-            );
-        }
-        }
-    ```
+            body: Center(
+            child: Text('Hello, Flutter!'),
+            ),
+        ),
+        );
+    }
+    }
+```
 
 In the above example, MyApp is a stateless widget that represents the root widget of the app. It returns a MaterialApp widget, which provides the basic material design layout for the app. The MaterialApp contains a Scaffold widget, which defines the basic app structure with an app bar and a body. The body contains a Center widget, which centers the text widget displaying "Hello, Flutter!" on the screen.
 
@@ -59,51 +59,47 @@ A StatefulWidget is a widget that can change its state over time. It represents 
 
 They consist of two separate classes: the widget class itself and an associated state class. The widget class is created using the `class` keyword and overrides the `createState()` method to create an instance of the associated state class. The state class is created using the `class` keyword and overrides the `build()` method to define the UI.
 
-Example: `TextField`, `Checkbox`, `ListView`.
+Example: `TextField`, `Checkbox`, `ListView`
 
-    ```dart
-                class CounterApp extends StatefulWidget {
-        @override
-        _CounterAppState createState() => _CounterAppState();
-        }
-
-        class _CounterAppState extends State<CounterApp> {
-        int _counter = 0;
-
-        void _incrementCounter() {
-            setState(() {
-            _counter++;
-            });
-        }
-
-        @override
-        Widget build(BuildContext context) {
-            return MaterialApp(
-            home: Scaffold(
-                appBar: AppBar(
-                title: Text('Counter App'),
-                ),
-                body: Center(
-                child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                    Text(
-                        'Counter Value: $_counter',
-                        style: TextStyle(fontSize: 24),
-                    ),
-                    ElevatedButton(
-                        onPressed: _incrementCounter,
-                        child: Text('Increment'),
-                    ),
-                    ],
-                ),
-                ),
+```dart
+            class CounterApp extends StatefulWidget {
+    @override
+    _CounterAppState createState() => _CounterAppState();
+    
+    class _CounterAppState extends State<CounterApp> {
+    int _counter = 0
+    void _incrementCounter() {
+        setState(() {
+        _counter++;
+        });
+    
+    @override
+    Widget build(BuildContext context) {
+        return MaterialApp(
+        home: Scaffold(
+            appBar: AppBar(
+            title: Text('Counter App'),
             ),
-            );
-        }
-        }
-    ```
-
+            body: Center(
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                Text(
+                    'Counter Value: $_counter',
+                    style: TextStyle(fontSize: 24),
+                ),
+                ElevatedButton(
+                    onPressed: _incrementCounter,
+                    child: Text('Increment'),
+                ),
+                ],
+            ),
+            ),
+        ),
+        );
+    }
+    }
+``
 In the above example, CounterApp is a stateful widget that represents an app that increments a counter value when a button is pressed. The CounterApp widget has an associated state class _CounterAppState, which holds the mutable state of the widget, including the counter value. The build method defines the UI for the widget, displaying the counter value and an "Increment" button. The onPressed callback for the button calls the _incrementCounter method, which updates the counter value using the setState method. The setState method triggers a rebuild of the widget, updating the UI to reflect the new counter value.
 
 ## Widget Tree and Organization

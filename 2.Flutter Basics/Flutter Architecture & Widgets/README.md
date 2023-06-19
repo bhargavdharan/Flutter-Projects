@@ -62,7 +62,7 @@ They consist of two separate classes: the widget class itself and an associated 
 Example: `TextField`, `Checkbox`, `ListView`
 
 ```dart
-            class CounterApp extends StatefulWidget {
+    class CounterApp extends StatefulWidget {
     @override
     _CounterAppState createState() => _CounterAppState();
     
@@ -99,7 +99,7 @@ Example: `TextField`, `Checkbox`, `ListView`
         );
     }
     }
-``
+```
 In the above example, CounterApp is a stateful widget that represents an app that increments a counter value when a button is pressed. The CounterApp widget has an associated state class _CounterAppState, which holds the mutable state of the widget, including the counter value. The build method defines the UI for the widget, displaying the counter value and an "Increment" button. The onPressed callback for the button calls the _incrementCounter method, which updates the counter value using the setState method. The setState method triggers a rebuild of the widget, updating the UI to reflect the new counter value.
 
 ## Widget Tree and Organization
